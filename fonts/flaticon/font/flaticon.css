@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 20/03/2019 02:18
+  	Creation date: 17/01/2019 14:19
   	*/
 
 @font-face {
@@ -30,10 +30,9 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-ideas:before { content: "\f100"; }
-.flaticon-flasks:before { content: "\f101"; }
-.flaticon-analysis:before { content: "\f102"; }
-.flaticon-ux-design:before { content: "\f103"; }
-.flaticon-web-design:before { content: "\f104"; }
-.flaticon-idea:before { content: "\f105"; }
-.flaticon-innovation:before { content: "\f106"; }
+.flaticon-praying:before { content: "\f100"; }
+.flaticon-church:before { content: "\f101"; }
+.flaticon-bible:before { content: "\f102"; }
+.flaticon-social-care:before { content: "\f103"; }
+.flaticon-rings:before { content: "\f104"; }
+.flaticon-promotion:before { content: "\f105"; }

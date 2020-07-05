@@ -40,6 +40,49 @@
 	// Scrollax
    $.Scrollax();
 
+
+
+   // Burger Menu
+	var burgerMenu = function() {
+
+		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
+
+			event.preventDefault();
+
+			if ( $('#ftco-nav').is(':visible') ) {
+				$(this).removeClass('active');
+			} else {
+				$(this).addClass('active');	
+			}
+
+			
+			
+		});
+
+	};
+	burgerMenu();
+
+
+	var onePageClick = function() {
+
+
+		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
+	    event.preventDefault();
+
+	    var href = $.attr(this, 'href');
+
+	    $('html, body').animate({
+	        scrollTop: $($.attr(this, 'href')).offset().top - 70
+	    }, 500, function() {
+	    	// window.location.hash = href;
+	    });
+		});
+
+	};
+
+	onePageClick();
+	
+
 	var carousel = function() {
 		$('.home-slider').owlCarousel({
 	    loop:true,
@@ -63,51 +106,6 @@
 	      }
 	    }
 		});
-		$('.carousel-testimony').owlCarousel({
-			center: false,
-			loop: true,
-			items:1,
-			margin: 30,
-			stagePadding: 0,
-			nav: false,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 3
-				},
-				1000:{
-					items: 4
-				}
-			}
-		});
-
-		$('.single-slider').owlCarousel({
-			animateOut: 'fadeOut',
-	    animateIn: 'fadeIn',
-			autoplay: true,
-			loop: true,
-			items:1,
-			margin: 0,
-			stagePadding: 0,
-			nav: true,
-			dots: true,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 1
-				},
-				1000:{
-					items: 1
-				}
-			}
-		});
-
 	};
 	carousel();
 
@@ -176,9 +174,10 @@
 	scrollWindow();
 
 	
+
 	var counter = function() {
 		
-		$('#section-counter').waypoint( function( direction ) {
+		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-causes').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 
@@ -201,6 +200,7 @@
 
 	}
 	counter();
+
 
 	var contentWayPoint = function() {
 		var i = 0;
@@ -238,8 +238,6 @@
 	};
 	contentWayPoint();
 
-
-
 	// magnific popup
 	$('.image-popup').magnificPopup({
     type: 'image',
@@ -272,11 +270,6 @@
   });
 
 
-
-  var bgVideo = function() {
-		$('.player').mb_YTPlayer();
-	};
-	bgVideo();
 
 
 
